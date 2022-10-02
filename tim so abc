@@ -1,0 +1,36 @@
+# Bài 4. Nhập số N gồm 3 chữ số.
+# tranngoc dongchu
+# Yêu cầu:
+# a. Cho biết số nhỏ nhất của N.
+# b. Tính tổng các chữ số của N.
+
+# Ví dụ 1:
+# N= 254
+# Số nhỏ nhất là: 2
+# Tổng 2+5+4 = 11
+
+# Ví dụ 2:
+# N= 357
+# Số nhỏ nhất là: 3
+# Tổng 3+5+7 = 15
+
+
+
+
+import re
+socantim = str(input("Số cần tìm: "))
+sumso =  0
+a = "= "
+tach =  re.findall("\d",socantim)
+if len(tach) == 3:
+    if int(socantim) >= 100:
+        print("Số nhỏ nhất: "+str(min(tach)))
+        for i in tach:
+            a  = str(i)+"+"+str(a)
+            sumso = sumso + int(i)
+        a = a.replace("+=","=")
+        print("Tổng "+str(a)+str(sumso))
+    else:
+        print("not so co 3 chu so")
+else:
+    print("not so co 3 chu so")
