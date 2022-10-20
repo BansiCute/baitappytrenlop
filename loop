@@ -1,0 +1,21 @@
+# a = int(input("nhập n: "))
+# tong = 0
+# while True:
+#     if 0<a<=10000:
+#         old = a
+#         a = 0
+#         while a < old:
+#             a= a +1
+#             tong = 1/a + tong
+#         print("tổng =",tong)
+#         break
+#     else:
+#         a = int(input("Nhập lại n: "))
+
+a = int(input('nhập n: '))
+while not 0<a<=10000:
+    a = int(input("Nhập lại n: "))
+tong =0
+for i in range(1,a+1):
+    tong = tong + 1/i
+print("tổng =",tong)
